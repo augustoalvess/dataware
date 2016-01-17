@@ -1,0 +1,48 @@
+#obscure{
+    display:none; /* Hide the DIV */
+    position:fixed;
+    _position:absolute; /* hack for internet explorer 6 */  
+    height:100%;
+    min-height: 100%;
+    width:100%;  
+    background:#000;  
+    z-index:100;
+    
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+    /**opacity: 0.2;*/
+}
+
+/* Popup div */
+#popup_box { 
+    display:block; /* Hide the DIV */
+    height:auto;
+    min-height: 40px;
+    width:600px;
+    background:#FFFFFF;  
+    z-index:100; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    text-align: center;
+    border-radius: 4px;
+
+    /* additional features, can be omitted */
+    font-size:15px;
+}
+
+#popupBoxClose{
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alert{
+    margin-bottom: 0px !important;
+}
+

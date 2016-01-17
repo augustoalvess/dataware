@@ -1,0 +1,26 @@
+<?php
+
+$toolbar = new \Dataware\Entity\Toolbar();
+$toolbar->setDisableToolbarActions(array(
+    Dataware\Entity\Toolbar::TB_ACTION_PRINT,
+    Dataware\Entity\Toolbar::TB_ACTION_CLONE,
+    Dataware\Entity\Toolbar::TB_ACTION_UNIFY,
+    Dataware\Entity\Toolbar::TB_ACTION_SAVE,
+));
+$toolbar->setEnableToolbarActions(array(Dataware\Entity\Toolbar::TB_ACTION_ATTACHMENTS));
+
+$attachment = new \Dataware\Entity\Attachment($id, $entity);
+$tabs = array(
+    new \Dataware\Entity\Tab("company", "Arquivos anexados", $this->ListAttachmentFilesHelper($attachment), true),
+    new \Dataware\Entity\Tab("mission", "Upload de arquivos", $this->MultiUploaderHelper($attachment))
+);
+$panelContent .= $this->TabHelper($tabs);
+$panel = new \Dataware\Entity\Panel($caption, $panelContent, $icon);
+
+$view = new \Dataware\Entity\View();
+$view->setToolbar($toolbar);
+$view->setPanel($panel);
+
+echo $this->ViewHelper($view);
+
+?>

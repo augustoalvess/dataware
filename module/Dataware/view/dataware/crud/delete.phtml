@@ -1,0 +1,11 @@
+<?php
+
+$panelContent = "Têm certeza de que deseja excluir este registro?";
+$panelContent .= "<form method='post'><input type='submit' value='Sim' class='input-submit btn btn-primary'></form>";
+
+$panel = new Dataware\Model\Panel("Aviso!", $panelContent, 'fa-exclamation-triangle', 'width: 50%; margin-top: 5%');
+$panel->setType(\Zend\Mvc\Controller\Plugin\FlashMessenger::NAMESPACE_WARNING);
+
+echo $this->PanelHelper($panel);
+
+?>

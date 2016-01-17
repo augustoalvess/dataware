@@ -1,0 +1,20 @@
+<?php
+
+$panelContent .= $this->ListAttachmentFilesHelper(new Dataware\Entity\Attachment(1, 'Register\Entity\Cliente'));
+
+$buttonNew = new \Dataware\Entity\Button("add", "Adicionar anexo", "fa-plus-circle", \Dataware\Entity\Button::BUTTON_TYPE_SUBMIT);
+$buttonNew->setClass(\Dataware\Entity\Button::BUTTON_CLASS_PRIMARY);
+$buttonNew->setAction("/register/anexo/add");
+
+$buttonBack = new \Dataware\Entity\Button("voltar", "Voltar", "fa-arrow-circle-left");
+$buttonBack->setClass(\Dataware\Entity\Button::BUTTON_CLASS_DEFAULT);
+$buttonBack->setHref("void(0)");
+$buttonBack->setOnClick("history.back();");
+
+$panelContent .= $this->ButtonHelper($buttonNew);
+$panelContent .= $this->ButtonHelper($buttonBack);
+
+$panel = new \Dataware\Entity\Panel("Anexos", $panelContent, 'fa-paperclip');
+echo $this->PanelHelper($panel);
+
+?>

@@ -1,0 +1,56 @@
+<?php
+
+$formCliente->prepare();
+$formUsuario->prepare();
+$panelContent = $this->form()->openTag($formCliente);
+
+$dadosPessoais = $this->fieldRow($formCliente->get('nome'));
+$dadosPessoais .= $this->fieldRow($formCliente->get('rg'));
+$dadosPessoais .= $this->fieldRow($formCliente->get('cpf'));
+$dadosPessoais .= $this->fieldRow($formCliente->get('dataNascimento'));
+$dadosPessoais .= $this->fieldRow($formCliente->get('sexo'));
+$dadosPessoais .= $this->fieldRow($formCliente->get('observacao'));
+
+$endereco = $this->fieldRow($formCliente->get('pais'));
+$endereco .= $this->fieldRow($formCliente->get('estado'));
+$endereco .= $this->fieldRow($formCliente->get('cidade'));
+$endereco .= $this->fieldRow($formCliente->get('cep'));
+$endereco .= $this->fieldRow($formCliente->get('bairro'));
+$endereco .= $this->fieldRow($formCliente->get('endereco'));
+$endereco .= $this->fieldRow($formCliente->get('numero'));
+$endereco .= $this->fieldRow($formCliente->get('complemento'));
+
+$contato = $this->fieldRow($formCliente->get('email'));
+$contato .= $this->fieldRow($formCliente->get('telefoneCelular'));
+$contato .= $this->fieldRow($formCliente->get('telefoneResidencial'));
+$contato .= $this->fieldRow($formCliente->get('telefoneTrabalho'));
+
+$autenticacao = $this->fieldRow($formUsuario->get('login'));
+$autenticacao .= $this->fieldRow($formUsuario->get('password'));
+
+$tabs = array(
+    new \Dataware\Entity\Tab("dadosPessoais", "Dados pessoais", $dadosPessoais, true),
+    new \Dataware\Entity\Tab("endereco", "Endereço", $endereco),
+    new \Dataware\Entity\Tab("contato", "Contato", $contato),
+    new \Dataware\Entity\Tab("autenticacao", "Autenticação", $autenticacao)
+);
+
+$panelContent .= $this->TabHelper($tabs);
+
+$buttonSave = new \Dataware\Entity\Button("salvar", "Salvar e logar", "fa-floppy-o", \Dataware\Entity\Button::BUTTON_TYPE_SUBMIT);
+$buttonSave->setClass(\Dataware\Entity\Button::BUTTON_CLASS_PRIMARY);
+
+$buttonBack = new \Dataware\Entity\Button("voltar", "Voltar", "fa-arrow-circle-left");
+$buttonBack->setClass(\Dataware\Entity\Button::BUTTON_CLASS_DEFAULT);
+$buttonBack->setHref("void(0)");
+$buttonBack->setOnClick("history.back();");
+
+$panelContent .= $this->ButtonGroupHelper(array($buttonSave, $buttonBack));
+$panelContent .= $this->form()->closeTag();
+
+$panel = new \Dataware\Entity\Panel("Novo perfil", $panelContent, 'fa-user');
+$panel->setStyle("width:70%; margin-left:auto; margin-right:auto; margin-bottom:50px; margin-top:20px;");
+
+echo $this->PanelHelper($panel);
+
+?>

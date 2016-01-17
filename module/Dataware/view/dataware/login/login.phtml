@@ -1,0 +1,21 @@
+<div class="panel-login">
+
+<?php
+$form = $this->form;
+$form->prepare();
+$form->setAttribute('action', $this->url('login'));
+
+$formLogin = "<div style='width:325px; margin-top:40px; margin-left:auto; margin-right:auto; text-align:center;'>";
+$formLogin .= "<img src='{$this->basePath()}/img/logo_system.png' style='margin-bottom:20px'>";
+$formLogin .= $this->form()->openTag($form);
+$formLogin .= $this->fieldRow($form->get('login'));
+$formLogin .= $this->fieldRow($form->get('password'));
+$formLogin .= "<input type='submit' name='send' class='btn btn-primary loading' value='Logar'>";
+$formLogin .= $this->form()->closeTag();
+$formLogin .= "<button onclick=\"window.location.href = '/register/cliente'\" type='submit' id='register' class='btn btn-default loading'>Registrar-se</button>";
+$formLogin .= "</div>";
+
+echo $formLogin;
+?>
+      
+</div>

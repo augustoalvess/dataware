@@ -1,0 +1,26 @@
+<?php
+
+$toolbar = new \Dataware\Entity\Toolbar();
+$toolbar->setDisableToolbarActions(array(
+    Dataware\Entity\Toolbar::TB_ACTION_PRINT,
+    Dataware\Entity\Toolbar::TB_ACTION_EDIT,
+    Dataware\Entity\Toolbar::TB_ACTION_DELETE,
+    Dataware\Entity\Toolbar::TB_ACTION_CLONE,
+    Dataware\Entity\Toolbar::TB_ACTION_UNIFY,
+    Dataware\Entity\Toolbar::TB_ACTION_VIEW,
+    Dataware\Entity\Toolbar::TB_ACTION_ATTACHMENTS,
+));
+
+$form->prepare();
+$addForm = $this->form()->openTag($form);              
+$addForm .= $this->fieldCollection($form);
+$addForm .= $this->form()->closeTag();
+$panel = new \Dataware\Entity\Panel($caption, $addForm, $icon);
+
+$view = new \Dataware\Entity\View();
+$view->setToolbar($toolbar);
+$view->setPanel($panel);
+
+echo $this->ViewHelper($view);
+
+?>

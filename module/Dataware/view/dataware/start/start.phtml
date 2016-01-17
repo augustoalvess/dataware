@@ -1,0 +1,13 @@
+<div class="favorites">
+    
+    <?php
+    if ( count($favorites) > 0 )
+    {
+        foreach ( $favorites as $favorite )
+        {
+            echo $this->FavoriteMenuHelper($favorite);
+        }
+    }
+    ?>
+    
+</div>

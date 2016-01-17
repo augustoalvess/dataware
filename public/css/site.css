@@ -1,0 +1,491 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28/02/2014, 09:28:05
+    Author     : augusto
+*/
+
+body {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin: 0px !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #ffffff;
+    background-image: url("../img/site/background.jpg");
+    background-position: center top !important;
+    background-repeat: repeat;
+}
+
+.header{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 118px;
+    background-color: #0075b0; /**#0088cc;*/
+}
+
+.header-content{
+    display: table;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 115px;
+}
+
+.logo{
+    width: 30%;
+    height: 90px;
+    float: left;
+}
+
+.menu{
+    float: left;
+    width: 70%;
+    margin-top: 1%;
+}
+
+#menu ul {
+    padding:0px;
+    margin:0px;
+    float: right;
+    font-size: 15px;
+    margin-top: 40px;
+}
+
+#menu ul li { 
+    display: inline; 
+    padding: 10px;
+}
+
+.menu-selected{
+    background: #333;
+}
+
+#menu ul li a {
+    padding: 5px 10px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu ul li:hover{
+    color: #ddd;
+    background: #333;
+}
+
+.content{
+    width: 70%;
+    min-height: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.banner{
+    margin-top: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 380px;
+}
+
+#slider{
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+    height: 330px;
+    background: #f7f7f7;
+    border: 1px solid #f0f0f0;
+}
+
+.slides-img img{
+    height:350px; 
+    max-width:400px;
+    width: auto !important
+}
+
+.chocoslider{
+    margin-bottom: 0px !important;
+}
+
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 350px;
+}
+
+.footer{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;    
+    background: #333;
+}
+
+.footer-content{
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;    
+    min-height: 250px;
+    color: #ddd;
+}
+
+.footer-data-company{
+    padding: 10px;
+    padding-top: 30px;
+    width: 35%;
+    float: left;
+    min-height: 250px;
+}
+
+.footer-site-map{
+    padding: 10px;
+    padding-top: 30px;
+    width: 35%;
+    float: left;
+    min-height: 250px;
+}
+
+.map ul li{
+    list-style-type: none;
+    padding: 5px;
+}
+
+.map ul li a{
+    color: #ddd !important;
+}
+
+.map .menu-selected{
+    background: #0075b0;
+}
+
+.footer-data-employees{
+    text-align: left;
+    padding: 10px;
+    padding-top: 30px;
+    padding-left: 30px;
+    width: 30%;
+    float: left;
+    min-height: 250px;
+}
+
+.destaques{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.produtos-destaque{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: inline-table;
+}
+
+.link-produto{
+    text-decoration: none;
+    float: left;
+    width: 175px;
+    min-height: 400px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.link-produto:hover{
+    text-decoration: underline;
+    color: #999;
+}
+
+.resumo-produto{
+    width: 100%;
+    height: 100%;
+}
+
+.capa-produto{
+    background: #0088cc;
+}
+
+.capa-produto img{
+    width: 100%;
+    height: 150px;
+    float: right;
+    margin-bottom: 5px;
+}
+
+.titulo-produto{
+    width: 100%;
+    padding-top: 10px;
+    min-height: 30px;
+    color: #0088cc;
+    font-size: 18px;
+}
+
+.descricao-produto{
+    margin-top: 10px;
+    color: gray;
+}
+
+.status-produto{
+    margin-top: 5px;
+    color: #999;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.see-more{
+    background: #0075b0
+}
+
+.see-more:hover, .submit-button:hover{
+    background: #333;
+}
+
+.hint{
+    min-height: 25px;
+    background: #eee;
+    font-weight: bold;
+    color: #999;
+    padding: 5px;
+}
+
+.text-hint{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+.productbrief{
+    background: #fbfbfb;
+    border: 1px solid #ddd;
+    display: block;
+    float: left;
+    height: 292px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 195px;
+}
+
+.linkProductbrief{
+    text-decoration: none !important;
+}
+
+.productbrief-img{
+    background: #f7f7f7;
+    border: 1px solid #f0f0f0;
+    height: 130px;
+    padding: 3px;
+    text-align: center;
+    min-width: 173px;
+    display: table-cell;
+    vertical-align: middle;
+    position: static;
+}
+
+.productbrief-img img{
+    max-height: 122px;
+    max-width: 155px !important;
+}
+
+.productbrief h4{
+    min-height: 45px;
+    color: #fff !important;
+    text-decoration: none !important;
+    text-align: center;
+    background: #0075b0;
+    font: bold 14px Arial;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.productbrief-desc-p{
+    border: 0;
+    line-height: 18px;
+    margin: 8px 0;
+    padding: 7px;
+    overflow: hidden;
+}
+
+.box-item1{
+    width: 112px;
+    height: 33px;
+}
+
+.our-products{
+    margin-top: 20px;
+    width: 100%;
+    display: inline-table;
+}
+
+.actions-products{
+    float: left;
+    width: 25%;
+}
+
+.mini-panel{
+    border: 1px solid #ddd;
+    background: #fbfbfb;
+    margin-bottom: 15px;
+}
+
+.mini-panel-header{
+    padding: 5px 10px;
+    background: #333;
+    color: #fff;
+}
+
+.mini-panel-body{
+    padding: 5px;
+}
+
+.active-products{
+    float: right;
+    width: 73.9%;
+}
+
+#search-product{
+    width: 100%;
+    font-size: 13px;
+    height: 30px;
+}
+
+.submit-button{
+    background: #0075b0;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.tree_item_selected{
+    background: #eee;
+}
+
+.product{
+    display: table;
+    background: #fbfbfb;
+    border: 1px solid #ddd;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+.product-imgs{
+    display: table;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.product-cover{
+    width: 173px;
+    float: left;
+}
+
+.product-header{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.product-desc-p{
+    border: 0;
+    padding: 7px;
+    padding-left: 20px;
+    overflow: hidden;
+    color: #428bca;
+    width: 70%;
+    float: right;
+}
+
+.product-images{
+    width: 100%;
+    margin-left: 15px;
+    background: #191919;
+}
+
+.product-image{
+    width: 400px;
+    height: 350px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.choco-title{
+    display: none !important;
+}
+
+.contact{
+    margin-top: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label{
+    width: 100%;
+}
+
+fieldset{
+    font-weight: bold;
+}
+
+fieldset > fieldset label {
+    width: 20%; 
+    float: left; 
+    clear: none;
+    color: gray;
+    text-align: left;
+}
+
+.input-checkbox{
+    width: 10% !important;
+    float: left;
+    height: 25px !important;
+    width: 25px !important;
+    clear: both;
+}
+
+.input-textarea{
+    height: 10em !important;
+}
+
+form ul li{
+    color: red;
+    list-style-type: none;
+}
+
+.form-control{
+    border-radius: 0px;
+}
+
+.cke{
+    border: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.cke_top,
+.cke_bottom{
+    display: none !important;
+}
+
+.cke_contents{
+    height: auto !important;
+}
+
+.cke_wysiwyg_frame{
+    height: auto !important;
+}

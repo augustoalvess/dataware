@@ -1,0 +1,26 @@
+<?php
+
+$toolbar = new \Dataware\Entity\Toolbar();
+$toolbar->setDisableToolbarActions(array(
+    Dataware\Entity\Toolbar::TB_ACTION_PRINT,
+    Dataware\Entity\Toolbar::TB_ACTION_EDIT,
+    Dataware\Entity\Toolbar::TB_ACTION_SAVE,
+    Dataware\Entity\Toolbar::TB_ACTION_DELETE,
+    Dataware\Entity\Toolbar::TB_ACTION_CLONE,
+    Dataware\Entity\Toolbar::TB_ACTION_UNIFY,
+    Dataware\Entity\Toolbar::TB_ACTION_VIEW,
+    Dataware\Entity\Toolbar::TB_ACTION_ATTACHMENTS,
+));
+
+$addAction = "/process/agendamento/add";
+$editAction = "/process/agendamento/edit";
+$diary = new \Dataware\Entity\Diary($addAction, $editAction, $agendamentos);
+$panel = new \Dataware\Entity\Panel("Agenda", $this->DiaryHelper($diary), "fa-calendar");
+
+$view = new \Dataware\Entity\View();
+$view->setToolbar($toolbar);
+$view->setPanel($panel);
+
+echo $this->ViewHelper($view);
+
+?>

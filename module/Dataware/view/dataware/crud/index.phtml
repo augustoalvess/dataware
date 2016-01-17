@@ -1,0 +1,26 @@
+<?php
+
+$toolbar = new Dataware\Entity\Toolbar();
+$toolbar->setShowDefaultToolbarActions(true);
+$toolbar->setDisableToolbarActions(array(
+    Dataware\Entity\Toolbar::TB_ACTION_PRINT,
+    Dataware\Entity\Toolbar::TB_ACTION_EDIT,
+    Dataware\Entity\Toolbar::TB_ACTION_SAVE,
+    Dataware\Entity\Toolbar::TB_ACTION_VIEW,
+    Dataware\Entity\Toolbar::TB_ACTION_DELETE,
+    Dataware\Entity\Toolbar::TB_ACTION_ATTACHMENTS
+));
+
+$grid = new Dataware\Entity\Grid();
+$grid->setEntity($entity);
+$grid->setData($dataGrid);
+$grid->setDisableActions(array(Dataware\Entity\GridAction::GRID_ACTION_ATTACHMENT_ID));
+$panel = new Dataware\Entity\Panel($caption, $this->GridHelper($grid), $icon);
+
+$view = new Dataware\Entity\View();
+$view->setToolbar($toolbar);
+$view->setPanel($panel);
+
+echo $this->ViewHelper($view);
+
+?>

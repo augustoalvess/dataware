@@ -1,0 +1,19 @@
+{
+    "name": "Dataware",
+    "description": "Dataware",
+    "license": "by Tecnon",
+    "keywords": [
+        "dataware",
+        "zf2",
+	"doctrine",
+        "zf2 components",
+        "zend components"
+    ],
+    "homepage": "http://framework.zend.com/",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.2.*",
+	"doctrine/doctrine-orm-module": "0.*",
+	"doctrine/orm": "2.4.*"
+    }
+}
