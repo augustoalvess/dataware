@@ -64,7 +64,8 @@ class FieldRow extends FormRow
         {
             $element->setValue(NULL);
         }
-
+        
+        $this->defineWidthElement(&$element);
         $elementString = $elementHelper->render($element);
         
         $labelAttributes = $element->getOption("labelAttributes");
@@ -127,6 +128,33 @@ class FieldRow extends FormRow
         }
 
         return "<div id='{$element->getName()}'>" . $markup . "</div>";
+    }
+    
+    const NUMBER_FIELD_SIZE = "20%";
+    const DATE_FIELD_SIZE = "40%";
+    const SELECT_FIELD_SIZE = "auto";
+    
+    /**
+     * Ajusta o tamanho correto do campo, conforme definido
+     * para o seu tipo. Os campos não contemplados, assumem
+     * o tamanho padrão definido no css de 100%.
+     * 
+     * @param \Zend\Form\Element $element
+     */
+    private function defineWidthElement($element)
+    {
+        if ( $element instanceof \Zend\Form\Element\Number )
+        {
+            $element->setAttribute("style", "width:" . self::NUMBER_FIELD_SIZE);
+        }
+        else if ( $element instanceof \Zend\Form\Element\Date )
+        {
+            $element->setAttribute("style", "width:" . self::DATE_FIELD_SIZE);
+        }
+        else if ( $element instanceof \Zend\Form\Element\Select )
+        {
+            $element->setAttribute("style", "width:" . self::SELECT_FIELD_SIZE);
+        }
     }
 }
 

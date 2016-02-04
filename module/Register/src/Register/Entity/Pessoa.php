@@ -30,7 +30,7 @@ class Pessoa
      * @ORM\GeneratedValue(strategy = "IDENTITY")
      * @ORM\SequenceGenerator(sequenceName = "pessoa_id_seq", initialValue = 1)
      * 
-     * @Annotation\Type("Zend\Form\Element\Text")
+     * @Annotation\Type("Zend\Form\Element\Number")
      * @Annotation\Filter({"name":"StripTags"})
      * @Annotation\Options({"label":"ID"})
      * @Annotation\Attributes({"class":"input-numeric form-control", "readOnly":"true"})
