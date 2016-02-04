@@ -165,6 +165,7 @@ label {
 label span{
     float: left;
     font-weight: bold;
+    width: 100%;
 }
 
 .cke{
@@ -375,7 +376,7 @@ form li{
 
 select {
     margin-bottom: 5px;
-    width: 300px;
+    min-width: 50%;
     height: 40px !important;
 }
 
