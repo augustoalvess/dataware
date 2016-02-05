@@ -12,4 +12,10 @@ INSERT INTO menu (fathermenu_id, title, action, icon, favorite) VALUES (4, 'Agen
 INSERT INTO menu (fathermenu_id, title, action, icon, favorite) VALUES (4, 'Prontuários', '/process/record', 'fa-file-text', true);
 INSERT INTO menu (fathermenu_id, title, action, icon, favorite) VALUES (4, 'Relatórios', '/process/report', 'fa-bar-chart', true);
 
+--Usuário admin padrão
+INSERT INTO useraccount (login, password, name, active) VALUES ('admin', MD5('admin'), 'Usuário Administrativo', true);
+INSERT INTO pessoa (id, nome, telefonecelular, usuario_id, tipo, sexo) VALUES (1, 'Usuário Administrativo', '(51) 9241-3296', 1, 'cliente', 'M');
+INSERT INTO cliente (id) VALUES (1);
+ALTER SEQUENCE pessoa_id_seq RESTART WITH 2;
+
 COMMIT;
