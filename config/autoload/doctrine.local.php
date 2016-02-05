@@ -18,7 +18,7 @@ return array(
                     'port'     => '5432',
                     'user'     => 'postgres',
                     'password' => 'postgres',
-                    'dbname'   => 'gesatec'
+                    'dbname'   => 'dataware'
                 )
             )
         )
