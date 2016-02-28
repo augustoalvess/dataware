@@ -190,11 +190,18 @@ class Module
                     $em = $sm->getServiceLocator()->get(Module::ENTITY_MANAGER);   				
                     return new View\Helper\DiaryHelper($em);
                 },
-            ),
-            
-            'invokables' => array(
-                'fieldCollection' => 'Dataware\View\Helper\FieldCollection',
-                'fieldRow' => 'Dataware\View\Helper\FieldRow'
+                        
+                'fieldCollection' => function ($sm) 
+                {
+                    $em = $sm->getServiceLocator()->get(Module::ENTITY_MANAGER);   				
+                    return new View\Helper\FieldCollection($em);
+                },
+                        
+                'fieldRow' => function ($sm) 
+                {
+                    $em = $sm->getServiceLocator()->get(Module::ENTITY_MANAGER);   				
+                    return new View\Helper\FieldRow($em);
+                },
             )
     	);
     }
